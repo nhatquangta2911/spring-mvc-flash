@@ -11,6 +11,7 @@
     <title>Greeting Page</title>
 </head>
 <body>
-    <p>Hey, dude!</p>
+    <h1>Username: ${username}</h1>
+    <h1>Password: ${password}</h1>
 </body>
 </html>
