@@ -8,11 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
-    <p style="color: forestgreen">Login successfully!</p>
-    <h1>Hello ${username}</h1>
-
+<section class="session">
+    <div class="container">
+        <br>
+        <p class="label has-text-success">Login successfully!</p>
+        <p class="title is-2">Hello ${email}</p>
+    </div>
+</section>
 </body>
 </html>
+
