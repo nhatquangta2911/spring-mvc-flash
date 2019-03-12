@@ -19,7 +19,7 @@
 <section class="session">
     <br><br><br><br>
     <div class="container columns is-mobile is-centered">
-    <form class="column cis-6 box box-padding box-shadow" action="/login" method="post">
+    <form class="column is-6 box box-padding box-shadow" action="/login" method="post">
         <br>
         <div class="field">
             <p class="title is-2 has-text-primary">Login Page</p>
