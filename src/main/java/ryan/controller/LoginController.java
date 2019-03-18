@@ -21,12 +21,12 @@ public class LoginController {
 
         if("user01@gmail.com".equals(email) && "123456".equals(password)) {
             model.addAttribute("email", email);
-            return "redirect:/welcome";
+            return "/welcome";
+        } else {
+
+            model.addAttribute("error", "Email or password is invalid");
+            return "/login";
         }
-
-        model.addAttribute("error", "Email or password is invalid");
-        return "/login";
-
     }
 
 }

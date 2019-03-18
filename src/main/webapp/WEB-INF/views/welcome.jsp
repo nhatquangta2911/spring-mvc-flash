@@ -20,8 +20,15 @@
         <br>
         <p class="label has-text-success">Login successfully!</p>
         <p class="title is-2">Hello ${email}</p>
+        <br>
+        <button class="button is-warning" onclick="redirect()">Edit Student Information</button>
     </div>
 </section>
+<script>
+    function redirect() {
+        window.location = "/edit";
+    }
+</script>
 </body>
 </html>
 
