@@ -1,13 +1,14 @@
 package ryan.controller;
 
+import com.google.common.collect.ImmutableMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import java.util.Arrays;
-
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class StudentDemoController {
@@ -15,7 +16,8 @@ public class StudentDemoController {
     @GetMapping(path = "/edit")
     public String editStudent(final Model model) {
 
-        StudentForm student = new StudentForm("Tạ Nhật Quang", 9, "An toàn thông tin", "Male",
+
+        StudentForm student = new StudentForm("TA NHAT QUANG", 100, "SE", "M",
                 Arrays.asList("Vietnamese", "English"), Arrays.asList("Sport", "Music"));
         model.addAttribute("student", student);
 
@@ -24,26 +26,20 @@ public class StudentDemoController {
 
     @PostMapping(path = "/edit")
     public String editStudent(final Model model, @ModelAttribute("student") final StudentForm student) {
-        model.addAttribute("username", student.getName());
-        return "/welcome";
+        model.addAttribute("student", student);
+        return "studentInfo";
     }
 
     @ModelAttribute("majors")
-    public String[] getMajors() {
-        return new String[]{
-                "Công nghệ phần mềm",
-                "An toàn thông tin",
-                "Mạng",
-                "Hệ thống nhúng"
-        };
+    public List<Major> getMajors() {
+       return Arrays.asList(new Major("SE", "Software Engineering"),
+                            new Major("N", "Networking"),
+                            new Major("IS","Information Security"));
     }
 
     @ModelAttribute("genders")
-    public String[] getGenders() {
-        return new String[]{
-                "Male",
-                "Female"
-        };
+    public List<String> getGenders() {
+        return Arrays.asList("Male", "Female");
     }
 
     @ModelAttribute("languages")
