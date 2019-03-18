@@ -1,17 +1,24 @@
-package ryan.form;
+package ryan.controller;
 
 import java.util.List;
 
 public class StudentForm {
 
     private String name;
+
     private float score;
+
     private String major;
+
     private String gender;
+
     private List<String> languages;
+
     private List<String> hobbies;
 
-    public StudentForm(String name, float score, String major, String gender, List<String> languages, List<String> hobbies) {
+    public StudentForm(final String name, final float score, final String major,
+                       final String gender, final List<String> languages,
+                       final List<String> hobbies) {
         this.name = name;
         this.score = score;
         this.major = major;
@@ -24,7 +31,7 @@ public class StudentForm {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -32,7 +39,7 @@ public class StudentForm {
         return score;
     }
 
-    public void setScore(float score) {
+    public void setScore(final float score) {
         this.score = score;
     }
 
@@ -40,7 +47,7 @@ public class StudentForm {
         return major;
     }
 
-    public void setMajor(String major) {
+    public void setMajor(final String major) {
         this.major = major;
     }
 
@@ -48,7 +55,7 @@ public class StudentForm {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(final String gender) {
         this.gender = gender;
     }
 
@@ -56,7 +63,7 @@ public class StudentForm {
         return languages;
     }
 
-    public void setLanguages(List<String> languages) {
+    public void setLanguages(final List<String> languages) {
         this.languages = languages;
     }
 
@@ -64,7 +71,7 @@ public class StudentForm {
         return hobbies;
     }
 
-    public void setHobbies(List<String> hobbies) {
+    public void setHobbies(final List<String> hobbies) {
         this.hobbies = hobbies;
     }
 }
