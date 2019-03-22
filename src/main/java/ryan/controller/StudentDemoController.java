@@ -17,7 +17,7 @@ public class StudentDemoController {
     public String editStudent(final Model model) {
 
 
-        StudentForm student = new StudentForm("TA NHAT QUANG", 100, "SE", "M",
+        StudentForm student = new StudentForm("TA NHAT QUANG", 100, "SE", "Male",
                 Arrays.asList("Vietnamese", "English"), Arrays.asList("Sport", "Music"));
         model.addAttribute("student", student);
 

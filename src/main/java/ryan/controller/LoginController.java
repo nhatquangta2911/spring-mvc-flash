@@ -23,7 +23,6 @@ public class LoginController {
             model.addAttribute("email", email);
             return "/welcome";
         } else {
-
             model.addAttribute("error", "Email or password is invalid");
             return "/login";
         }

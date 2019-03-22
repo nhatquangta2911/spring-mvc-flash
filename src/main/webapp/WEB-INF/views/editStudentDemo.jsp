@@ -18,12 +18,13 @@
 <br><br>
 <div class="container columns is-mobile is-centered">
     <form:form method="post"  modelAttribute="student" cssClass="column is-6 box box-padding box-shadow">
-        <p class="title is-2 has-text-primary">Edit User Page</p>
+        <p class="title is-2 has-text-primary">Edit User Page</p><hr>
         <form:label path="name">Name: </form:label>
-        <form:input cssClass="input" path="name"/>
+        <form:input cssClass="input" readonly="true" disabled="true" path="name"/>
         <br>
         <form:label path="name">Score: </form:label>
-        <form:input cssClass="input" path="score"/>
+        <form:input cssClass="input" readonly="true" disabled="true" path="score"/>
+        <br>
         <br>
         <form:label path="major">Major: </form:label>
         <form:select cssClass="select" path="major" items="${majors}" itemLabel="name" itemValue="id">
